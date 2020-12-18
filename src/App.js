@@ -13,6 +13,8 @@ class App extends Component {
 
   updateAppState = (guess) => {
     const { actual } = this.state;
+    
+    console.log("true guess is: ", actual);
 
     const absDiff = Math.abs(guess - actual);
     const { feedbackMessage, feedbackColor } = getFeedback(absDiff);
